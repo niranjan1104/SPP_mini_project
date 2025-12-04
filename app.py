@@ -50,23 +50,22 @@ df = df[['student_id','gender','branch','year_of_study','area',
          'distance_km','mode_of_transport','travel_time_min',
          'travel_cost_rs','monthly_pass','satisfaction_rating']]
 df.to_sql("student_commute", conn, if_exists="append", index=False)
-
 conn.close()
 
 # --- Step 2: Flask route ---
 @app.route("/", methods=["GET", "POST"])
 def index():
     conn = sqlite3.connect("commute_project.db")
-    conn.row_factory = sqlite3.Row  # for dict-like rows
+    conn.row_factory = sqlite3.Row
 
     # Fetch unique filters
-    years = ['All'] + [row['year_of_study'] for row in conn.execute("SELECT DISTINCT year_of_study FROM student_commute").fetchall()]
-    modes = ['All'] + [row['mode_of_transport'] for row in conn.execute("SELECT DISTINCT mode_of_transport FROM student_commute").fetchall()]
+    years = ['All'] + [row['year_of_study'] for row in conn.execute("SELECT DISTINCT year_of_study FROM student_commute")]
+    modes = ['All'] + [row['mode_of_transport'] for row in conn.execute("SELECT DISTINCT mode_of_transport FROM student_commute")]
 
     selected_year = request.form.get("year_of_study", "All")
     selected_mode = request.form.get("mode_of_transport", "All")
 
-    # Build SQL query
+    # Build SQL query for table
     query = "SELECT * FROM student_commute WHERE 1=1"
     if selected_year != "All":
         query += f" AND year_of_study='{selected_year}'"
@@ -75,19 +74,18 @@ def index():
 
     df_filtered = pd.read_sql(query, conn)
 
-    # --- Safely drop 'id' if exists ---
+    # ✅ Safely drop auto ID column
     df_filtered = df_filtered.drop(columns=['id'], errors='ignore')
-
     df_filtered_records = df_filtered.to_dict(orient='records') if not df_filtered.empty else []
 
-    # Average stats by mode for filtered data
+    # ✅ Average stats by transport mode
     stats_records = []
     if not df_filtered.empty:
         stats_query = """
         SELECT mode_of_transport,
-               AVG(travel_time_min) AS avg_time,
-               AVG(travel_cost_rs) AS avg_cost,
-               AVG(satisfaction_rating) AS avg_rating
+               ROUND(AVG(travel_time_min),2) AS avg_time,
+               ROUND(AVG(travel_cost_rs),2) AS avg_cost,
+               ROUND(AVG(satisfaction_rating),2) AS avg_rating
         FROM student_commute
         WHERE 1=1
         """
@@ -96,26 +94,66 @@ def index():
         if selected_mode != "All":
             stats_query += f" AND mode_of_transport='{selected_mode}'"
         stats_query += " GROUP BY mode_of_transport"
+
         stats_df = pd.read_sql(stats_query, conn)
         stats_records = stats_df.to_dict(orient='records')
 
-    # Chart: Overall students per transport mode
-    chart_query = "SELECT mode_of_transport, COUNT(*) AS total FROM student_commute GROUP BY mode_of_transport"
+    # ✅ ✅ ✅ PERFECT DYNAMIC GRAPH LOGIC ✅ ✅ ✅
+
+    if selected_year == "All" and selected_mode == "All":
+        chart_query = """
+        SELECT mode_of_transport, COUNT(*) AS total
+        FROM student_commute
+        GROUP BY mode_of_transport
+        """
+
+    elif selected_year != "All" and selected_mode == "All":
+        chart_query = f"""
+        SELECT mode_of_transport, COUNT(*) AS total
+        FROM student_commute
+        WHERE year_of_study='{selected_year}'
+        GROUP BY mode_of_transport
+        """
+
+    elif selected_year == "All" and selected_mode != "All":
+        chart_query = f"""
+        SELECT year_of_study AS mode_of_transport, COUNT(*) AS total
+        FROM student_commute
+        WHERE mode_of_transport='{selected_mode}'
+        GROUP BY year_of_study
+        """
+
+    else:
+        chart_query = f"""
+        SELECT mode_of_transport, COUNT(*) AS total
+        FROM student_commute
+        WHERE year_of_study='{selected_year}'
+          AND mode_of_transport='{selected_mode}'
+        GROUP BY mode_of_transport
+        """
+
     chart_df = pd.read_sql(chart_query, conn)
+
     fig, ax = plt.subplots()
-    ax.bar(chart_df['mode_of_transport'], chart_df['total'], color='#3498db')
-    ax.set_xlabel("Transport Mode")
+
+    if not chart_df.empty:
+        ax.bar(chart_df.iloc[:, 0], chart_df['total'])
+        ax.set_title("Dynamic Student Distribution")
+    else:
+        ax.text(0.5, 0.5, "No data available", ha='center', va='center')
+
+    ax.set_xlabel("Category")
     ax.set_ylabel("Number of Students")
-    ax.set_title("Overall Students per Transport Mode")
     plt.xticks(rotation=45)
 
-    # Convert plot to PNG image for HTML
+    # Convert plot to base64 image
     img = io.BytesIO()
     plt.tight_layout()
     fig.savefig(img, format='png')
     img.seek(0)
     chart = base64.b64encode(img.getvalue()).decode()
     plt.close(fig)
+
     conn.close()
 
     return render_template(

@@ -117,7 +117,7 @@
         <form method="POST">
             <div class="filters">
                 <div>
-                    <label for="year_of_study">Filter by Year of Study:</label>
+                    <label for="year_of_study">Year of Study:</label>
                     <select name="year_of_study" id="year_of_study">
                         {% for year in years %}
                             <option value="{{ year }}" {% if selected_year == year %}selected{% endif %}>{{ year }}</option>
@@ -126,7 +126,7 @@
                 </div>
 
                 <div>
-                    <label for="mode_of_transport">Filter by Transport Mode:</label>
+                    <label for="mode_of_transport">Transport Mode:</label>
                     <select name="mode_of_transport" id="mode_of_transport">
                         {% for mode in modes %}
                             <option value="{{ mode }}" {% if selected_mode == mode %}selected{% endif %}>{{ mode }}</option>
