@@ -1,0 +1,201 @@
+student_id,gender,branch,year_of_study,area,distance_km,mode_of_transport,travel_time_min,travel_cost_rs,monthly_pass,satisfaction_rating
+S001,Female,Mechanical,TE,Kothrud,1.0,Bus,6,2.56,No,4
+S002,Other,ENTC,BE,Baner,6.23,Auto,37,52.63,No,4
+S003,Male,Civil,TE,Baner,5.04,Train,35,14.53,Yes,3
+S004,Male,Electrical,BE,Kothrud,3.8,Bus,30,7.91,Yes,3
+S005,Other,CSE,BE,Pimple Saudagar,11.07,Train,77,27.58,Yes,3
+S006,Male,Civil,SE,Hadapsar,1.0,Metro,8,2.09,Yes,4
+S007,Male,Civil,BE,Kalyani Nagar,5.98,Bike,35,15.07,No,4
+S008,Other,IT,FE,Baner,5.76,Train,34,14.33,Yes,5
+S009,Female,Mechanical,BE,Kothrud,4.28,Walking,42,0.0,No,3
+S010,Male,Electrical,TE,Karvenagar,12.37,Auto,98,102.17,No,2
+S011,Other,Mechanical,BE,Kothrud,7.31,Walking,80,0.0,No,3
+S012,Female,CSE,BE,Pimple Saudagar,3.35,Bike,10,7.49,No,3
+S013,Other,IT,SE,Wakad,7.34,Auto,58,53.05,No,4
+S014,Male,CSE,BE,Pimple Saudagar,15.0,Bike,90,38.46,No,4
+S015,Female,Mechanical,BE,Wakad,4.55,Bus,27,11.85,No,4
+S016,Male,Electrical,SE,Karvenagar,7.37,Bike,22,14.84,No,5
+S017,Female,CSE,TE,Kothrud,9.78,Car,29,38.57,No,3
+S018,Female,Civil,FE,Hinjewadi,10.88,Bicycle,108,0.0,No,4
+S019,Other,Mechanical,BE,Baner,2.14,Auto,17,20.66,No,3
+S020,Other,Electrical,FE,Wakad,4.27,Bus,25,10.48,Yes,3
+S021,Female,IT,SE,Baner,3.35,Bicycle,33,0.0,No,4
+S022,Male,CSE,SE,Baner,3.9,Walking,42,0.0,No,4
+S023,Male,Electrical,BE,Wakad,9.19,Auto,55,57.24,No,5
+S024,Other,CSE,BE,Wakad,4.42,Walking,44,0.0,No,5
+S025,Female,Civil,SE,Hadapsar,9.17,Auto,45,64.42,No,4
+S026,Male,ENTC,TE,Kalyani Nagar,7.3,Bike,43,16.03,No,4
+S027,Other,IT,SE,Kothrud,5.95,Car,23,19.05,No,4
+S028,Female,ENTC,BE,Karvenagar,11.82,Metro,59,31.81,Yes,5
+S029,Other,CSE,TE,Kothrud,6.98,Walking,69,0.0,No,4
+S030,Male,CSE,FE,Kalyani Nagar,9.3,Auto,74,90.37,No,2
+S031,Female,IT,SE,Kothrud,6.82,Bike,20,18.43,No,4
+S032,Other,CSE,BE,Kothrud,4.36,Train,30,12.88,Yes,5
+S033,Other,ENTC,FE,Baner,6.11,Train,30,9.6,Yes,4
+S034,Other,IT,BE,Kothrud,9.24,Metro,46,26.11,No,4
+S035,Other,IT,BE,Wakad,14.54,Auto,58,93.3,No,3
+S036,Other,Electrical,SE,Hinjewadi,11.8,Walking,153,0.0,No,5
+S037,Male,Electrical,BE,Karvenagar,8.36,Bike,50,19.18,No,3
+S038,Other,Electrical,BE,Pimple Saudagar,3.79,Auto,18,35.0,No,5
+S039,Male,IT,BE,Wakad,11.3,Bike,33,32.42,No,3
+S040,Female,IT,TE,Kothrud,9.25,Auto,74,63.67,No,4
+S041,Female,Electrical,BE,Karvenagar,9.44,Bike,56,21.52,No,5
+S042,Male,CSE,BE,Hinjewadi,9.6,Metro,48,17.75,Yes,5
+S043,Female,IT,SE,Kalyani Nagar,1.26,Auto,6,11.57,No,3
+S044,Other,CSE,SE,Kalyani Nagar,6.61,Bike,39,22.03,No,2
+S045,Male,Electrical,BE,Hinjewadi,5.05,Bicycle,70,0.0,No,4
+S046,Female,IT,TE,Pimple Saudagar,10.58,Train,84,27.33,No,3
+S047,Female,Mechanical,TE,Hinjewadi,7.0,Train,49,15.19,No,4
+S048,Other,IT,SE,Wakad,5.09,Bicycle,50,0.0,No,5
+S049,Male,Civil,SE,Baner,4.38,Bicycle,43,0.0,No,4
+S050,Male,CSE,TE,Kothrud,1.0,Bike,5,2.99,No,5
+S051,Male,Mechanical,BE,Karvenagar,4.85,Bus,24,10.46,Yes,5
+S052,Male,Civil,BE,Pimple Saudagar,11.14,Metro,66,28.64,Yes,3
+S053,Other,Electrical,FE,Hinjewadi,7.71,Walking,92,0.0,No,3
+S054,Male,Electrical,SE,Baner,11.42,Bicycle,171,0.0,No,4
+S055,Other,Mechanical,BE,Kalyani Nagar,3.01,Bicycle,36,0.0,No,5
+S056,Male,IT,SE,Wakad,6.63,Bicycle,99,0.0,No,4
+S057,Male,CSE,BE,Pimple Saudagar,1.36,Bike,8,3.87,No,3
+S058,Male,Mechanical,FE,Wakad,5.15,Bike,30,17.12,No,3
+S059,Male,IT,TE,Pimple Saudagar,7.65,Car,22,22.1,No,4
+S060,Male,ENTC,SE,Hadapsar,4.96,Car,14,12.76,No,5
+S061,Male,Mechanical,BE,Hadapsar,6.49,Car,38,22.92,No,4
+S062,Female,ENTC,TE,Karvenagar,7.51,Auto,45,57.63,No,2
+S063,Other,Electrical,SE,Kalyani Nagar,9.51,Walking,104,0.0,No,3
+S064,Male,ENTC,BE,Kothrud,6.74,Metro,40,16.9,Yes,4
+S065,Female,IT,TE,Baner,11.36,Car,34,26.7,No,4
+S066,Other,Civil,FE,Kothrud,11.09,Train,55,22.59,Yes,3
+S067,Other,CSE,BE,Wakad,1.58,Walking,18,0.0,No,3
+S068,Other,Civil,TE,Karvenagar,9.07,Bicycle,126,0.0,No,3
+S069,Other,CSE,SE,Hadapsar,4.08,Train,24,10.41,Yes,4
+S070,Other,IT,FE,Hinjewadi,6.63,Car,33,15.51,No,2
+S071,Other,Civil,SE,Wakad,6.0,Bicycle,78,0.0,No,4
+S072,Other,Civil,SE,Kalyani Nagar,1.11,Bus,8,2.19,Yes,4
+S073,Female,ENTC,TE,Kothrud,13.82,Bike,55,49.87,No,3
+S074,Other,Electrical,TE,Wakad,6.95,Walking,97,0.0,No,4
+S075,Male,Electrical,BE,Karvenagar,8.98,Auto,35,89.36,No,2
+S076,Other,ENTC,SE,Hadapsar,7.61,Metro,30,12.09,No,5
+S077,Male,CSE,SE,Karvenagar,3.09,Auto,18,27.62,No,4
+S078,Female,ENTC,BE,Karvenagar,7.61,Car,30,25.0,No,3
+S079,Other,IT,BE,Wakad,11.89,Bicycle,166,0.0,No,3
+S080,Female,Electrical,SE,Wakad,5.08,Bicycle,60,0.0,No,5
+S081,Other,CSE,TE,Wakad,4.89,Bike,19,15.76,No,5
+S082,Male,ENTC,TE,Baner,10.9,Auto,87,102.17,No,2
+S083,Other,Mechanical,FE,Hinjewadi,7.36,Car,29,27.45,No,5
+S084,Male,Mechanical,SE,Kothrud,6.72,Auto,47,64.31,No,4
+S085,Male,Mechanical,TE,Kothrud,6.37,Train,38,15.09,No,4
+S086,Female,CSE,FE,Wakad,1.8,Walking,19,0.0,No,5
+S087,Female,CSE,SE,Pimple Saudagar,13.3,Bike,53,47.56,No,4
+S088,Female,ENTC,FE,Baner,13.46,Train,94,22.97,No,3
+S089,Female,CSE,BE,Hadapsar,4.42,Bus,17,7.57,Yes,3
+S090,Other,Civil,BE,Karvenagar,6.54,Bicycle,71,0.0,No,3
+S091,Male,Mechanical,TE,Karvenagar,18.66,Train,111,43.42,No,4
+S092,Male,IT,TE,Hadapsar,10.27,Bus,82,26.13,No,3
+S093,Female,CSE,BE,Hinjewadi,3.99,Metro,23,9.77,No,4
+S094,Female,Mechanical,TE,Wakad,12.76,Metro,51,31.44,No,4
+S095,Female,Civil,TE,Kothrud,3.5,Walking,35,0.0,No,5
+S096,Male,ENTC,TE,Wakad,3.37,Bus,20,9.72,No,5
+S097,Female,IT,TE,Pimple Saudagar,3.85,Car,11,15.0,No,4
+S098,Other,Mechanical,BE,Hadapsar,4.82,Train,38,10.12,No,4
+S099,Female,ENTC,BE,Hadapsar,7.86,Car,23,18.31,No,4
+S100,Other,IT,BE,Kalyani Nagar,9.35,Auto,65,78.9,No,3
+S101,Male,Electrical,FE,Kalyani Nagar,13.52,Metro,67,25.77,Yes,3
+S102,Male,Electrical,TE,Pimple Saudagar,6.72,Bike,40,15.23,No,3
+S103,Other,Mechanical,TE,Hinjewadi,8.19,Bicycle,122,0.0,No,3
+S104,Male,Electrical,BE,Hinjewadi,8.48,Bus,67,23.18,Yes,4
+S105,Female,Civil,FE,Kalyani Nagar,13.88,Train,111,23.79,Yes,5
+S106,Female,CSE,FE,Pimple Saudagar,1.82,Train,9,4.03,Yes,5
+S107,Male,Mechanical,FE,Kalyani Nagar,2.78,Walking,33,0.0,No,5
+S108,Female,IT,FE,Kalyani Nagar,8.87,Bus,35,15.32,Yes,4
+S109,Other,IT,FE,Wakad,7.46,Walking,74,0.0,No,2
+S110,Male,Civil,TE,Kothrud,14.48,Car,57,36.05,No,3
+S111,Other,CSE,FE,Baner,17.0,Bus,68,46.56,Yes,2
+S112,Female,CSE,BE,Kothrud,1.29,Auto,6,11.87,No,4
+S113,Other,IT,SE,Hadapsar,13.09,Car,52,30.84,No,5
+S114,Male,IT,FE,Kothrud,4.45,Bike,26,10.81,No,5
+S115,Male,Mechanical,SE,Wakad,6.33,Train,31,16.6,Yes,3
+S116,Female,Electrical,FE,Hadapsar,7.52,Train,37,14.26,Yes,5
+S117,Other,IT,SE,Kothrud,5.4,Metro,32,10.44,No,3
+S118,Other,Mechanical,SE,Pimple Saudagar,11.83,Walking,141,0.0,No,4
+S119,Other,Mechanical,BE,Wakad,4.51,Bike,13,15.08,No,4
+S120,Other,CSE,SE,Kothrud,7.66,Bike,45,15.5,No,3
+S121,Other,ENTC,BE,Karvenagar,7.94,Metro,39,22.22,No,5
+S122,Female,Mechanical,SE,Pimple Saudagar,9.91,Metro,59,29.55,No,5
+S123,Other,CSE,BE,Kothrud,14.99,Walking,179,0.0,No,4
+S124,Other,CSE,FE,Baner,9.8,Metro,49,23.68,No,5
+S125,Male,Civil,TE,Baner,2.78,Bicycle,41,0.0,No,4
+S126,Other,Civil,BE,Hadapsar,6.36,Car,38,25.21,No,5
+S127,Female,CSE,FE,Karvenagar,6.8,Train,47,16.59,No,5
+S128,Female,Civil,TE,Hadapsar,10.87,Metro,76,26.52,Yes,4
+S129,Female,Civil,SE,Wakad,7.54,Auto,45,75.12,No,4
+S130,Male,Civil,TE,Baner,10.56,Bike,52,39.9,No,3
+S131,Female,Mechanical,BE,Wakad,6.26,Auto,25,52.81,No,3
+S132,Other,Mechanical,TE,Karvenagar,15.04,Walking,150,0.0,No,4
+S133,Female,CSE,TE,Pimple Saudagar,10.21,Walking,153,0.0,No,4
+S134,Male,ENTC,SE,Hadapsar,8.14,Auto,65,81.0,No,3
+S135,Female,CSE,SE,Baner,9.03,Train,63,15.32,Yes,4
+S136,Male,CSE,SE,Baner,9.41,Metro,75,21.46,Yes,4
+S137,Male,Civil,SE,Kothrud,12.82,Bus,89,32.81,Yes,4
+S138,Male,ENTC,BE,Kalyani Nagar,18.63,Train,149,28.24,Yes,3
+S139,Male,Mechanical,BE,Kothrud,7.83,Metro,46,15.63,No,5
+S140,Female,ENTC,BE,Kalyani Nagar,10.82,Auto,64,107.29,No,3
+S141,Other,Mechanical,TE,Kothrud,2.49,Car,9,8.42,No,4
+S142,Female,Civil,FE,Pimple Saudagar,6.1,Auto,48,58.36,No,4
+S143,Female,ENTC,BE,Wakad,13.88,Metro,55,26.87,Yes,5
+S144,Female,CSE,SE,Wakad,11.87,Metro,83,25.13,No,3
+S145,Other,CSE,FE,Hadapsar,16.2,Bike,97,59.45,No,4
+S146,Male,Electrical,TE,Hadapsar,13.27,Train,106,28.06,Yes,2
+S147,Male,Mechanical,TE,Hadapsar,6.03,Bike,24,23.07,No,3
+S148,Female,ENTC,TE,Pimple Saudagar,9.75,Bicycle,136,0.0,No,4
+S149,Male,Civil,FE,Hadapsar,6.57,Auto,52,54.14,No,4
+S150,Female,Electrical,BE,Kothrud,5.0,Bicycle,60,0.0,No,4
+S151,Other,Mechanical,BE,Pimple Saudagar,11.12,Metro,88,25.37,Yes,3
+S152,Other,Civil,TE,Hadapsar,7.51,Bike,37,28.82,No,3
+S153,Female,Civil,TE,Baner,9.02,Car,36,28.49,No,3
+S154,Other,Mechanical,SE,Hadapsar,8.86,Train,70,15.18,No,3
+S155,Other,Mechanical,TE,Kalyani Nagar,12.09,Walking,120,0.0,No,4
+S156,Other,Mechanical,BE,Baner,6.49,Auto,32,43.93,No,5
+S157,Female,ENTC,BE,Wakad,9.71,Car,58,37.29,No,3
+S158,Female,ENTC,TE,Baner,11.14,Bicycle,167,0.0,No,2
+S159,Male,ENTC,BE,Hadapsar,13.92,Walking,167,0.0,No,3
+S160,Other,Civil,FE,Hadapsar,2.03,Car,12,7.09,No,5
+S161,Female,CSE,SE,Kothrud,17.98,Metro,71,37.22,No,4
+S162,Other,CSE,FE,Hadapsar,1.89,Bicycle,28,0.0,No,4
+S163,Female,Mechanical,FE,Hinjewadi,9.43,Bus,47,17.11,No,4
+S164,Male,Electrical,FE,Wakad,7.12,Walking,78,0.0,No,3
+S165,Female,Electrical,SE,Kothrud,13.41,Bike,80,45.46,No,4
+S166,Male,Mechanical,TE,Karvenagar,5.87,Bicycle,58,0.0,No,4
+S167,Female,ENTC,TE,Baner,11.05,Metro,66,32.09,No,3
+S168,Other,Civil,FE,Karvenagar,4.73,Metro,28,7.4,No,4
+S169,Male,CSE,SE,Kothrud,7.62,Bicycle,76,0.0,No,3
+S170,Other,ENTC,TE,Hadapsar,10.94,Metro,54,30.48,No,3
+S171,Female,ENTC,SE,Pimple Saudagar,8.99,Bike,35,18.36,No,5
+S172,Other,Civil,SE,Hadapsar,6.41,Train,25,18.58,No,3
+S173,Male,Mechanical,FE,Kalyani Nagar,3.09,Walking,46,0.0,No,5
+S174,Other,CSE,FE,Hadapsar,7.77,Auto,62,75.7,No,4
+S175,Female,CSE,FE,Wakad,10.77,Bike,43,23.93,No,4
+S176,Other,CSE,SE,Hinjewadi,7.83,Auto,62,68.14,No,4
+S177,Other,Civil,TE,Kalyani Nagar,5.31,Bike,15,17.24,No,4
+S178,Female,CSE,BE,Kalyani Nagar,4.81,Auto,19,39.44,No,4
+S179,Female,ENTC,SE,Kothrud,5.57,Car,16,15.89,No,5
+S180,Female,Civil,FE,Hinjewadi,4.7,Bicycle,47,0.0,No,5
+S181,Other,CSE,SE,Hinjewadi,8.65,Bicycle,112,0.0,No,3
+S182,Male,IT,SE,Hadapsar,6.96,Bicycle,83,0.0,No,3
+S183,Female,IT,TE,Kalyani Nagar,8.39,Bicycle,117,0.0,No,4
+S184,Other,Mechanical,BE,Hinjewadi,14.56,Auto,116,121.08,No,3
+S185,Male,Civil,SE,Pimple Saudagar,6.2,Bike,24,15.52,No,4
+S186,Other,Civil,FE,Pimple Saudagar,10.02,Bus,50,28.3,Yes,5
+S187,Other,Mechanical,TE,Hadapsar,9.26,Walking,129,0.0,No,4
+S188,Male,ENTC,BE,Hinjewadi,3.13,Car,18,11.84,No,5
+S189,Female,ENTC,BE,Kothrud,12.55,Train,62,29.67,No,4
+S190,Male,CSE,FE,Kalyani Nagar,9.61,Bus,76,28.13,Yes,4
+S191,Male,CSE,FE,Pimple Saudagar,7.86,Metro,62,19.38,Yes,5
+S192,Female,CSE,TE,Kalyani Nagar,10.2,Car,61,37.74,No,4
+S193,Female,Electrical,FE,Kalyani Nagar,3.19,Metro,15,8.44,No,4
+S194,Other,Electrical,SE,Wakad,15.94,Train,79,46.08,No,3
+S195,Male,Mechanical,FE,Kalyani Nagar,9.77,Car,39,19.68,No,3
+S196,Other,IT,TE,Hadapsar,10.19,Bike,30,25.71,No,3
+S197,Female,Electrical,FE,Hinjewadi,7.51,Train,45,15.1,No,5
+S198,Other,ENTC,SE,Pimple Saudagar,8.96,Bicycle,89,0.0,No,3
+S199,Male,Civil,SE,Karvenagar,2.97,Metro,20,7.34,No,3
+S200,Female,Mechanical,TE,Karvenagar,10.01,Car,40,26.97,No,5

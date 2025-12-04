@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Commute Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 40px;
+        }
+
+        .filters {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filters label {
+            font-weight: bold;
+            font-size: 18px; /* Increased font size */
+            margin-right: 10px;
+        }
+
+        .filters select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #bdc3c7;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th, table td {
+            padding: 10px 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .chart {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .stats-section {
+            margin-top: 30px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stats-section h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Commute Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <!-- Filter Section -->
+        <form method="POST">
+            <div class="filters">
+                <div>
+                    <label for="year_of_study">Filter by Year of Study:</label>
+                    <select name="year_of_study" id="year_of_study">
+                        {% for year in years %}
+                            <option value="{{ year }}" {% if selected_year == year %}selected{% endif %}>{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mode_of_transport">Filter by Transport Mode:</label>
+                    <select name="mode_of_transport" id="mode_of_transport">
+                        {% for mode in modes %}
+                            <option value="{{ mode }}" {% if selected_mode == mode %}selected{% endif %}>{{ mode }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit">Apply Filters</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Filtered Table -->
+        {% if df_filtered %}
+            <h2>Filtered Student Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        {% for col in df_filtered[0].keys() %}
+                            <th>{{ col.replace('_',' ').title() }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in df_filtered %}
+                        <tr>
+                            {% for value in row.values() %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No data available for selected filters.</p>
+        {% endif %}
+
+        <!-- Stats Section -->
+        {% if stats %}
+            <div class="stats-section">
+                <h3>Average Statistics by Transport Mode</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mode of Transport</th>
+                            <th>Avg Travel Time (min)</th>
+                            <th>Avg Travel Cost (Rs)</th>
+                            <th>Avg Satisfaction Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in stats %}
+                            <tr>
+                                <td>{{ row.mode_of_transport }}</td>
+                                <td>{{ row.avg_time|round(2) }}</td>
+                                <td>{{ row.avg_cost|round(2) }}</td>
+                                <td>{{ row.avg_rating|round(2) }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        <!-- Chart -->
+        <div class="chart">
+            <h2>Overall Students per Transport Mode</h2>
+            <img src="data:image/png;base64,{{ chart }}" alt="Transport Mode Chart">
+        </div>
+    </div>
+</body>
+</html>
